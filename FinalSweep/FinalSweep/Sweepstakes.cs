@@ -13,7 +13,12 @@ namespace FinalSweep
 
         public Sweepstakes(string name)
         {
+            
+
             this.name = name;
+
+            Console.WriteLine("Sweepstakes name?");
+            name = Console.ReadLine();
         }
 
         public void RegisterContestant(Contestant contestant)
@@ -27,7 +32,7 @@ namespace FinalSweep
         public string PickWinner()
         {
             Random rnd = new Random();
-            int winningNumber = rnd.Next(1000, (contestants.Count + 1000));
+            int winningNumber = rnd.Next(1000, contestants.Count + 1000);
 
             foreach (KeyValuePair<int, Contestant> contestant in contestants)
             {

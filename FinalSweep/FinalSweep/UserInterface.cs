@@ -16,8 +16,11 @@ namespace FinalSweep
             switch (menuOption)
             {
                 case "1":
-                    GetContestant();
+                    GetContestant(Contestant contestant);
                     break;
+                case "2":
+                    name = uint.getname
+                    StartSweepstakes(string name);
                 default:
                     MainMenu();
                     break;
@@ -26,6 +29,12 @@ namespace FinalSweep
 
         }
 
+        public Sweepstakes StartSweepstakes()
+        {
+            Sweepstakes sweepstake = new Sweepstakes();
+            
+            return sweepstake;
+        }
         public Contestant GetContestant(Contestant contestant)
         {
             //Contestant contestant = new Contestant();
