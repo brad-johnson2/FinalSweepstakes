@@ -11,14 +11,20 @@ namespace FinalSweep
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
         Contestant contestant = new Contestant();
 
+        static Sweepstakes StartSweepstakes()
+        {
+            Sweepstakes sweepstake = new Sweepstakes();
+            
+            return sweepstake;
+        }
+
         public Sweepstakes(string name)
         {
             
 
             this.name = name;
 
-            Console.WriteLine("Sweepstakes name?");
-            name = Console.ReadLine();
+            
         }
 
         public void RegisterContestant(Contestant contestant)

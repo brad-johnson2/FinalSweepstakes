@@ -11,16 +11,16 @@ namespace FinalSweep
 
         static void MainMenu()
         {
-            Console.WriteLine("What would you like to do? 1. Register a contestant");
+            Console.WriteLine("What would you like to do? 1. Register a contestant 2. Start a Sweepstakes");
             string menuOption = Console.ReadLine();
             switch (menuOption)
             {
                 case "1":
-                    GetContestant(Contestant contestant);
+                    Contestant.NewContestant();
                     break;
                 case "2":
-                    name = uint.getname
-                    StartSweepstakes(string name);
+                    Sweepstakes.StartSweepstakes();
+                    break;
                 default:
                     MainMenu();
                     break;
@@ -29,16 +29,10 @@ namespace FinalSweep
 
         }
 
-        public Sweepstakes StartSweepstakes()
+      
+        static void GetContestant(Contestant contestant)
         {
-            Sweepstakes sweepstake = new Sweepstakes();
             
-            return sweepstake;
-        }
-        public Contestant GetContestant(Contestant contestant)
-        {
-            //Contestant contestant = new Contestant();
-
 
             Console.WriteLine("First Name?");
             contestant.firstName = Console.ReadLine();
@@ -51,8 +45,7 @@ namespace FinalSweep
 
             contestant.regNumber = contestant.idNumber;
             contestant.idNumber++;
-
-            return contestant;
+            
         }
 
 
