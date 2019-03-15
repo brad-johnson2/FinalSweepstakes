@@ -8,7 +8,7 @@ namespace FinalSweep
 {
     class ManagerFactory : ICreateSweepstakes
     {
-        public ICreateSweepstakes CreateSweepstakes()
+        public ISweepstakesManager CreateSweepstakes()
         {
             Console.WriteLine("Stack or Queue?");
             string dataChoice = Console.ReadLine();
@@ -16,11 +16,13 @@ namespace FinalSweep
             switch (dataChoice)
             {
                 case "Stack":
-                    
+                    return new SweepstakesStackManager();
                 case "Queue":
-
-                default;
-
+                    return new SweepstakesQueueManager();
+                default:
+                    CreateSweepstakes();
+                    return null;
+                    break;
             }
         }
     }

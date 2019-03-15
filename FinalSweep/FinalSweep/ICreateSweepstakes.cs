@@ -8,6 +8,6 @@ namespace FinalSweep
 {
     interface ICreateSweepstakes
     {
-        Sweepstakes CreateSweepstakes();
+        ISweepstakesManager CreateSweepstakes();
     }
 }

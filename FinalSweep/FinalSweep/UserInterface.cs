@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace FinalSweep
 {
-    static class UserInterface
+    public static class UserInterface
     {
 
-        static void MainMenu()
+        public static void MainMenu()
         {
             Console.WriteLine("What would you like to do? 1. Register a contestant 2. Start a Sweepstakes");
             string menuOption = Console.ReadLine();

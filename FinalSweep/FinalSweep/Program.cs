@@ -10,6 +10,7 @@ namespace FinalSweep
     {
         static void Main(string[] args)
         {
+            Sweepstakes sweepstakes = new Sweepstakes("Llama giveaway");
         }
     }
 }
